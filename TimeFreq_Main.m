@@ -1,10 +1,5 @@
 %% Time-Frequency analyses on Epoched datasets
 
-% This script will allow XXX
-
-% WHEN running with the SuperComputer, be sure that the folder is called
-% Export (without any date!)
-
 % NEED TO IMPLEMENT:
 % 1) Correlations
 % 2) Possibility to include more than 1 WS factors !
@@ -17,9 +12,8 @@
 % names!!)
 
 
-% Version 0.3 / 17.07.2019  
+% Version 0.4 / 13.07.2020 
 
-% /!/ See the guide and section below for practical examples. /!/
 
 %% ------------ XXX ---------- %%
 
@@ -74,13 +68,6 @@ RelativeTolerance = str2double(PromptInputs{6});
 % Frequency bands
 BandsList=BandsList(all(~cellfun('isempty', BandsList),2),:);
 
-% Path of the folder where to save results
-% if ~exist('Exports','dir')
-%     mkdir Exports
-%     mkdir Exports/Raw
-%     mkdir Exports/Stats
-% end
-
 % Path of the unique save folder (including date/time of analysis)
 if ispc
     save_folder = [pwd '/Exports_' date_name];
@@ -105,7 +92,8 @@ if strcmpi(ImportTF,'Yes')
 end
 
 % Path of most upper folder containing data
-data_folder = [pwd '/Data'];
+data_folder = uigetdir(pwd,'Select the most upper folder containing your .set EEG data files');
+% data_folder = [pwd '/Data'];
 root_folder = pwd;
 cd(data_folder);
 
@@ -115,7 +103,7 @@ FileList = dir(['**/*' '.set']);
 % Some toolboxes included .set files in them
 FileList(contains({FileList.name},'eeglab'))=[];
 
-%% DATA REMOVAL
+%% DATA REMOVAL (based on TimeFreq_Prompts.m)
 % Filtering the data in FileList if a second factor was included
 % Folders removal
 if ~isempty(DesignList(:,3))
@@ -259,7 +247,6 @@ if strcmpi(ImportTF,'No')
             % Replaced Predictive by 0 padding, since predictive sometimes
             % freezed the analysis. 
             % For a comparison see: https://ars.els-cdn.com/content/image/1-s2.0-S1051200415000792-mmc1.pdf
-
             for l=1:size(EEG.data,1)
                 [TFdata(l,:,:), Freqs]=wt(AvgEEG.data(l,:),AvgEEG.srate,'fmin',LowFreq,'Padding',0,...
                 'fmax',HighFreq,'Wavelet','Morlet','plot','off','Display','notify','f0',0.2,'RelTol',RelativeTolerance);  
@@ -401,11 +388,6 @@ end
 
 %% %%%%%%%%%%%%%%%%%%%%%%%%% STATISTICS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %-------------------------------------------------------------------------%
-
-% ALSO IMPLEMENT THE CORRELATION !!! 
-                    
-% WHY NOT LEAVE THE POSSIBILITY TO ALSO ANALYZE ALL
-% FREQUENCY BANDS ??? --> HEAVY BUT INTERESTING ! 
 
 % Decision about the statistical design 
 DesignFN = fieldnames(Design);
