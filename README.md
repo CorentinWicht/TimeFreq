@@ -1,90 +1,61 @@
 # EEG Time-frequency analysis scripts
 
-One Paragraph of project description goes here
+The MATLAB scripts available in this repository enable to compute EEG time-frequency decomposition as well as statistical analysis of simple designs (up to 1 within-subject and 1 between-subject factors). 
+
+
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
-
-### Prerequisites
-
-What things you need to install the software and how to install them
+Start by clicking on `Code` on the top right of the screen and then `Download ZIP` to download the whole repository (alternatively you can also clone it). 
+Then, you will need to run the scripts **in the following order**:
 
 ```
-Give examples
+1.TimeFreq_Design.m
+2.TimeFreq_Main.m
+3.TimeFreq_Figures.m (optional and still in development)
 ```
 
-### Installing
+You will find below a step by step explanation of how to run each script.
 
-A step by step series of examples that tell you how to get a development env running
+### 1.TimeFreq_Design.m
 
-Say what the step will be
+This script is the crucial to the proper functioning of the analysis. 
 
-```
-Give the example
-```
+Start by running the script in MATLAB (click on the `Run` button or on `F5`).
 
-And repeat
+X prompts will appear in the following order
 
-```
-until finished
-```
+#### 1.1. Settings
 
-End with an example of getting some data out of the system or using it for a little demo
+[![](tools/screenshots/Settings.png)]
 
-## Running the tests
+The first prompt enables to set up parameters regarding the time-frequency decomposition.
 
-Explain how to run the automated tests for this system
+You can decide to compute 1) `Evoked activity`, 2) `Induced activity` and/or 3) `Intertrial coherence`.
+For a deeper understanding between these three measures see:
+**REFS**
 
-### Break down into end to end tests
+Additionally, you can either import a `TimeFreq_Design.mat` and/or a `TimeFreq_Bands.mat` files (Y)  or create new ones (N).
 
-Explain what these tests test and why
+Finally, you can decide to :
+* Average reference your EEG files before the time-frequency decomposition
+* Restrict the time-window for statistics inside the time-range of your ERP
+* Apply a power spectrum normalization as usually performed by EEGLAB (i.e. 10 x Log10)
 
-```
-Give an example
-```
+## Dependencies
 
-### And coding style tests
 
-Explain what these tests test and why
+## Author
 
-```
-Give an example
-```
-
-## Deployment
-
-Add additional notes about how to deploy this on a live system
-
-## Built With
-
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
-
-## Contributing
-
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
-
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
-
-## Authors
-
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
-
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
+* **Corentin Wicht** 
+*SNSF Doc.CH PhD student*
+*[Laboratory for Neurorehabilitation Science](https://www3.unifr.ch/med/spierer/en/), University of Fribourg, Switzerland*
+*corentin.wicht@unifr.ch; corentinw.lcns@gmail.com*
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
-
-## Acknowledgments
-
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
-
-# TimeFreq
+This project is licensed under the XXX License - see the [LICENSE.md](LICENSE.md) file for details
  
+## Versions
+
+XXX
