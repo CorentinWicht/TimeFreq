@@ -1,8 +1,8 @@
 # EEG Time-frequency analysis scripts
 
-The MATLAB scripts available in this repository enable to compute EEG time-frequency decomposition as well as statistical analysis of simple designs (up to 1 within-subject and 1 between-subject factors). 
+The MATLAB scripts in this repository enable to compute EEG time-frequency decomposition as well as robust, permutation-based statistical analysis of simple designs (up to 1 within-subject and 1 between-subject factors). 
 
-**OF NOTE: The main analysis script can currently only import .set EEG files (i.e. [EEGLAB](https://github.com/sccn/eeglab) files)**
+**OF NOTE: The main analysis script can currently only import .set EEG files (i.e. [EEGLAB](https://github.com/sccn/eeglab) files).**
 
 ## Getting Started
 
@@ -15,7 +15,7 @@ Then, you will need to run the scripts **in the following order**:
 3.TimeFreq_Figures.m (optional and still in development)
 ```
 
-You will find below a step by step explanation of how to run each script.
+You will find below a step by step explanation on how to run each script.
 
 
 ### 1.TimeFreq_Design.m
@@ -126,7 +126,9 @@ The last prompt enables you to import a time-frequency decomposition previously 
 Since the decomposition requires heavy computation and is, de facto, time-consuming, you can decide to reimport the decomposition if you just want to perform the statistics separately (in this case press `Yes`).
 
 
-Once you are done with this last prompt, you can run the second script. 
+Once you are done with this last prompt, the script will generate a `TimeFreq_Param.mat` file containing all the parameters necessary for the second script.
+
+You can now run the second script. 
 
 
 ## Dependencies
