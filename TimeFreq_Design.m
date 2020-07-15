@@ -1,6 +1,22 @@
-%% PROMPT
+%% DESIGN
+
+% Version 0.4 / 13.07.2020 
+
+%% ------------ XXX ---------- %%
+
+%% Author(s)
+
+% Corentin Wicht (script, protocol) 
+% GitHub : https://github.com/CorentinWicht
+
+% If you have questions or want to contribute to this pipeline, feel free 
+% to contact corentin.wicht@unifr.ch
+
+%% --------------------- PRESS F5 -------------------- %%
+%% --------------------------------------------------- %%
 clear variables
 
+%% PROMPTS
 % Analyses 
 answer = inputdlg({['Would you like to assess:'...
     newline '[y = YES, n = NO]'... 
