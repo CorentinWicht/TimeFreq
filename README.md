@@ -80,7 +80,7 @@ There can only be **up to 2 levels for each factor !**
 
 There is already an example that shows you how to fill the first two columns, namely on the... :
 ```
-* First line you should indicate whether  **Factor1** is a Between-subjects (**B**) or Within-subjects (**W**) factor
+* First line you should indicate whether  Factor1 is a Between-subjects (B) or Within-subjects (W) factor
 * Second line you should give a name to the Factor
 * Third and fourth lines you need to define the name of each levels.\
 ```
@@ -136,10 +136,11 @@ You can now run the second script.
 
 ## Author
 
-* **Corentin Wicht** 
-*SNSF Doc.CH PhD student*
-*[Laboratory for Neurorehabilitation Science](https://www3.unifr.ch/med/spierer/en/), University of Fribourg, Switzerland*
-*corentin.wicht@unifr.ch; corentinw.lcns@gmail.com*
+**Corentin Wicht**\
+*SNSF Doc.CH PhD student*\
+*[Laboratory for Neurorehabilitation Science](https://www3.unifr.ch/med/spierer/en/)*\
+*University of Fribourg, Switzerland*\
+*corentin.wicht@unifr.ch; corentinw.lcns@gmail.com*\
 
 ## License
 
