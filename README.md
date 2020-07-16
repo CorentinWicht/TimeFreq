@@ -1,12 +1,12 @@
 # EEG Time-frequency analysis scripts
 
-The MATLAB scripts in this repository enable to compute EEG time-frequency decomposition as well as robust, permutation-based statistical analysis of simple designs (up to 1 within-subject and 1 between-subject factors). 
+The MATLAB scripts in this repository enable to compute EEG time-frequency decomposition using Morlet Wavelet transform as well as robust permutation-based statistical analyses with Threshold-Free Cluster Enhancement (TFCE) to account for multiple comparisons correction.
 
-**OF NOTE: The main analysis script can currently only import .set EEG files (i.e. [EEGLAB](https://github.com/sccn/eeglab) files).**
+**OF NOTE: The analysis script can currently only import .set EEG files (see [EEGLAB](https://github.com/sccn/eeglab)).**
 
 ## Getting Started
 
-Start by clicking on `Code` on the top right of the screen and then `Download ZIP` to download the whole repository (alternatively you can also clone it). 
+When on the [TimeFreq startup page](https://github.com/CorentinWicht/TimeFreq), start by clicking on `Code` on the top right of the screen and then `Download ZIP` to download the whole repository (alternatively you can also clone it). 
 Then, you will need to run the scripts **in the following order**:
 
 ```
@@ -15,14 +15,12 @@ Then, you will need to run the scripts **in the following order**:
 3.TimeFreq_Figures.m (optional and still in development)
 ```
 
-You will find below a step by step explanation on how to run each script.
+You will find below a step by step explanation on how to run each script in MATLAB (by clicking on the `Run` button or on your keyboard's button `F5`).
 
 
 ### 1.TimeFreq_Design.m
 
-This script is the crucial to the proper functioning of the analysis. 
-
-Start by running the script in MATLAB (click on the `Run` button or on your keyboard's button `F5`).
+This script is crucial to the proper functioning of the analysis. 
 
 The 7 prompts below will appear sequentially and each prompt will already be filled with default settings and/or examples on how they should be filled: 
 
@@ -35,7 +33,8 @@ The first prompt enables to set up parameters regarding the time-frequency decom
 
 You can decide to compute 1) `Evoked activity`, 2) `Induced activity` and/or 3) `Intertrial coherence`.\
 For a deeper understanding between these three measures see:\
-**REFS**
+* [Herrmann, C.S., Rach, S., Vosskuhl, J. et al. Time–Frequency Analysis of Event-Related Potentials: A Brief Tutorial. Brain Topogr 27, 438–450 (2014)](https://doi.org/10.1007/s10548-013-0327-5)
+* [Herrmann, C. S., Grigutsch, M., & Busch, N. A. (2005). EEG oscillations and wavelet analysis. In T. C. Handy (Ed.), Event-related potentials: A methods handbook (pp. 229-259). Cambridge, MA: MIT Press.](https://www.researchgate.net/publication/38135661_EEG_Oscillations_and_Wavelet_Analysis)
 
 Additionally, you can either import a `TimeFreq_Design.mat` and/or a `TimeFreq_Bands.mat` files (Y)  or create new ones (N).
 
@@ -43,7 +42,7 @@ Finally, you can decide to :
 ```
 * Average reference your EEG files before the time-frequency decomposition
 * Restrict the time-window for statistics inside the time-range of your ERP
-* Apply a power spectrum normalization as routinely performed by [EEGLAB](https://github.com/sccn/eeglab) (i.e. 10 x Log10)
+* Apply a power spectrum normalization as routinely performed by EEGLAB (i.e. 10 x Log10)
 ```
 
 
@@ -55,12 +54,13 @@ The second prompt enables to define EEG files-specific settings.
 
 Hence, you will have to provide the prompt with:
 ```
-* The sampling rate of your EEG files (**all files should have the same sampling rate**)
+* The sampling rate of your EEG files (all files should have the same sampling rate)
 * The 1) lowest and 2) highest frequency of interest for the time-frequency decomposition 
 * The number of permutations to compute robust, non-parametric statistics (i.e. the higher the number of permutations, the slower the computation)
 * The alpha threshold for statistics
-* The relative tolerance level (i.e. for additional information see: **REF**; that number should be increased if you are targetting very low frequencies)
+* The relative tolerance level (also called Epsilon), for additional information see:
 ```
+[D. Iatsenko, P. V. E. McClintock and A. Stefanovska, Linear and synchrosqueezed time-frequency representations revisited: Overview, standards of use, reconstruction, resolution, concentration, and algorithms, Dig. Signal Proc. 42, 1-26 (2015)](https://doi.org/10.1016/j.dsp.2015.03.004)
 
 
 #### 1.3. Design Definition
@@ -131,8 +131,11 @@ Once you are done with this last prompt, the script will generate a `TimeFreq_Pa
 You can now run the second script. 
 
 
-## Dependencies
-
+## Dependencies (Should write all rights reserved to XXX ?)
+1. [EEGLAB v14.1.2b: ](https://github.com/sccn/eeglab) Importing the .set EEG files
+2. [NMD v.2.00: ](http://www.physics.lancs.ac.uk/research/nbmphysics/diats/tfr/) Computing the Morlet wavelet-based time-frequency decomposition
+3. [FMUT v.0.5.1: ](https://github.com/ericcfields/FMUT) Computation of permutation-based statistics
+4. [ept_TFCE:](https://github.com/Mensen/ept_TFCE-matlab) Computation of permutation-based statistics and TFCE correction
 
 ## Author
 
@@ -144,8 +147,7 @@ You can now run the second script.
 
 ## License
 
-This project is licensed under the XXX License - see the [LICENSE.md](LICENSE.md) file for details
- 
-## Versions
+<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International License</a>.
 
-XXX
+See the [LICENSE.md](LICENSE.md) file for details
+
