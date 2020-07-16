@@ -6,7 +6,7 @@ The MATLAB scripts in this repository enable to compute EEG time-frequency decom
 
 ## Getting Started
 
-When on the [TimeFreq startup page](https://github.com/CorentinWicht/TimeFreq), start by clicking on `Code` on the top right of the screen and then `Download ZIP` to download the whole repository (alternatively you can also clone it). 
+When on the [TimeFreq startup page](https://github.com/CorentinWicht/TimeFreq), start by clicking on `↓ Code` on the top right of the screen and then `Download ZIP` to download the whole repository (alternatively you can also clone it). 
 Then, you will need to run the scripts **in the following order**:
 
 ```
