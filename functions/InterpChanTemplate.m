@@ -1,4 +1,15 @@
-% This script creates an excel file containing the list of interpolated
+%% Author(s)
+
+% Corentin Wicht (script, protocol) 
+% GitHub : https://github.com/CorentinWicht
+
+% If you have questions or want to contribute to this pipeline, feel free 
+% to contact corentin.wicht@unifr.ch
+
+% This work is licensed under a Creative Commons Attribution-NonCommercial
+% 4.0 International License (CC BY-NC)
+
+%% This script creates an excel file containing the list of interpolated
 % channels
 
 % Empty cells

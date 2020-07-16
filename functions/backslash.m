@@ -18,6 +18,9 @@ function Path = backslash (Loading_template)
 
 % Author: Corentin Wicht, LCNS, 2018
 % corentin.wicht@unifr.ch
+
+% This work is licensed under a Creative Commons Attribution-NonCommercial
+% 4.0 International License (CC BY-NC)
     
 j=1;
 for i=1:length(Loading_template)

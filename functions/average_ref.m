@@ -16,6 +16,10 @@ function EEG=average_ref(EEG,CzStruct,RefIndex)
 %   EEG   - EEG dataset structure
 
 % Author: Corentin Wicht, LCNS, 2018
+% corentin.wicht@unifr.ch
+
+% This work is licensed under a Creative Commons Attribution-NonCommercial
+% 4.0 International License (CC BY-NC)
 
     CzStruct.ref=CzStruct.labels;
     CzStruct.datachan=0;

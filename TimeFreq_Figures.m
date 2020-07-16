@@ -1,4 +1,20 @@
-%
+%% FIGURES
+
+% Version 0.4 / 13.07.2020 
+
+%% ------------ XXX ---------- %%
+
+%% Author(s)
+
+% Corentin Wicht (script, protocol) 
+% GitHub : https://github.com/CorentinWicht
+
+% If you have questions or want to contribute to this pipeline, feel free 
+% to contact corentin.wicht@unifr.ch
+
+% This work is licensed under a Creative Commons Attribution-NonCommercial
+% 4.0 International License (CC BY-NC)
+
 clear variables 
 %% This script enable to repeat the plotting operation while adjusting parameters
 

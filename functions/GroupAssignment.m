@@ -15,6 +15,12 @@ function [Output,GroupAssign]=GroupAssignment(Data,BetweenLevels,WithinLevels,va
 %   Output        = XX
 %   GroupAssign   = XX will be empty if no between-subject factors.
 
+% Author: Corentin Wicht, LCNS, 2018
+% corentin.wicht@unifr.ch
+
+% This work is licensed under a Creative Commons Attribution-NonCommercial
+% 4.0 International License (CC BY-NC)
+
 %% Set defaults
 nargs = nargin;
 if nargs > 3

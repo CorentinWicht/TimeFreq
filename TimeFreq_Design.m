@@ -12,6 +12,9 @@
 % If you have questions or want to contribute to this pipeline, feel free 
 % to contact corentin.wicht@unifr.ch
 
+% This work is licensed under a Creative Commons Attribution-NonCommercial
+% 4.0 International License (CC BY-NC)
+
 %% --------------------- PRESS F5 -------------------- %%
 %% --------------------------------------------------- %%
 clear variables

@@ -25,6 +25,9 @@ function SaveFigures(fig,Directory,Col,Formats)
 % Author: Corentin Wicht, LCNS, 2018
 % corentin.wicht@unifr.ch
 
+% This work is licensed under a Creative Commons Attribution-NonCommercial
+% 4.0 International License (CC BY-NC)
+
 if nargin<3
   Col = 'w';
   Formats='All'; 
