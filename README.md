@@ -141,7 +141,7 @@ You can now run the second script.
 
 **Corentin Wicht**\
 *SNSF Doc.CH PhD student*\
-*corentin.wicht@unifr.ch, corentinw.lcns@gmail.com*
+*corentin.wicht@unifr.ch, corentinw.lcns@gmail.com*\
 *[Laboratory for Neurorehabilitation Science](https://www3.unifr.ch/med/spierer/en/)*\
 *University of Fribourg, Switzerland*\
 
