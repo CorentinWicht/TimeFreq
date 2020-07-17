@@ -147,7 +147,7 @@ You can now run the second script.
 * [natsort v2.10](https://ch.mathworks.com/matlabcentral/fileexchange/47434-natural-order-filename-sort)
 * [saveeph](https://sites.google.com/site/cartoolcommunity/files)
 * [textprogressbar v1.00](https://ch.mathworks.com/matlabcentral/fileexchange/28067-text-progress-bar)
-* [topoplotIndie]
+* [topoplotIndie](https://www.mikexcohen.com/)
 * [vis_artifacts](https://github.com/sccn/clean_rawdata/blob/master/vis_artifacts.m)
 * [vline v1.00](https://ch.mathworks.com/matlabcentral/fileexchange/1039-hline-and-vline)
 
@@ -168,9 +168,10 @@ The dependencies are already included in the [functions/Dependencies](functions/
 See the [LICENSE.md](LICENSE.md) file for details
 
 ## Acknowledgements
-PD Dr. Lucas Spierer, President of the Section of Medicine (Faculty of science and Medicine, University of Fribourg, Switzerland), Professor of
-Neurology and co-director of the [Laboratory for Neurorehabilitation Science (LNS, UNIFR)](https://www3.unifr.ch/med/spierer/en/) provided substantial support and advices regarding theoretical conceptualization as well as access to the workplace and the infrastructure required to successfully complete the project. Additionally, Hugo Najberg and Dr. Michael Mouthon provided valuable advices regarding programming issues in MATLAB and technical support.
+PD Dr. Lucas Spierer, President of the Section of Medicine (Faculty of Science and Medicine, University of Fribourg, Switzerland), Professor of
+Neurology and Director of the [Laboratory for Neurorehabilitation Science (LNS, UNIFR)](https://www3.unifr.ch/med/spierer/en/) provided substantial support and advices regarding theoretical conceptualization as well as access to the workplace and the infrastructure required to successfully complete the project. Additionally, [Hugo Najberg](https://github.com/HugoNjb) and [Dr. Michael Mouthon](https://www3.unifr.ch/med/fr/section/personnel/all/people/3229/6a825) provided valuable advices regarding programming issues in MATLAB and technical support.1
 
 ## Fundings
-This research was supported by the [Swiss National Science Foundation](http://www.snf.ch/fr/Pages/default.aspx)
-Grants [#P0LAP1_181689](http://p3.snf.ch/project-181689) to Corentin Wicht and [#320030_175469](http://p3.snf.ch/project-175469) to PD Dr. Lucas Spierer
+This research was supported by [Swiss National Science Foundation](http://www.snf.ch/fr/Pages/default.aspx) grants:
+* [#P0LAP1_181689](http://p3.snf.ch/project-181689) to Corentin Wicht
+* [#320030_175469](http://p3.snf.ch/project-175469) to PD Dr. Lucas Spierer
