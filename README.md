@@ -131,11 +131,17 @@ Once you are done with this last prompt, the script will generate a `TimeFreq_Pa
 You can now run the second script. 
 
 
+### 2.TimeFreq_Main.m
+
+**XXX**
+
 ## Dependencies (Should write all rights reserved to XXX ?)
 1. [EEGLAB v14.1.2b: ](https://github.com/sccn/eeglab) Importing the .set EEG files
 2. [NMD v.2.00: ](http://www.physics.lancs.ac.uk/research/nbmphysics/diats/tfr/) Computing the Morlet wavelet-based time-frequency decomposition
 3. [FMUT v.0.5.1: ](https://github.com/ericcfields/FMUT) Computation of permutation-based statistics
 4. [ept_TFCE:](https://github.com/Mensen/ept_TFCE-matlab) Computation of permutation-based statistics and TFCE correction
+
+The dependencies are already included in the [functions/Dependencies](functions/Dependencies) folder.
 
 ## Author
 
@@ -143,7 +149,7 @@ You can now run the second script.
 *SNSF Doc.CH PhD student*\
 *corentin.wicht@unifr.ch, corentinw.lcns@gmail.com*\
 *[Laboratory for Neurorehabilitation Science](https://www3.unifr.ch/med/spierer/en/)*\
-*University of Fribourg, Switzerland*\
+*University of Fribourg, Switzerland*
 
 ## License
 
