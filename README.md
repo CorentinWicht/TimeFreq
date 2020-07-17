@@ -4,9 +4,25 @@ The MATLAB scripts in this repository enable to compute EEG time-frequency decom
 
 **OF NOTE: The analysis script can currently only import .set EEG files (see [EEGLAB](https://github.com/sccn/eeglab)).**
 
+## Table of Contents
+- [Getting Started](#Getting Started)
+- [1.TimeFreq_Design](#1.TimeFreq_Design.m)
+- [1.1. Settings](#1.1. Settings)
+- [1.2. Inputs ERP](#1.2. Inputs ERP)
+- [1.3. Design Definition](#1.3. Design Definition)
+- [1.4. Save Design Variables](#1.4. Save Design Variables)
+- [1.5. Frequency Bands Definition](#1.5. Frequency Bands Definition)
+- [1.6. Save Frequency Bands Variables](#1.6. Save Frequency Bands Variables)
+- [1.7. Import TF Decomposition](#1.7. Import TF Decomposition)
+- [2.TimeFreq_Main](#2.TimeFreq_Main.m)
+- [Author](#Author)
+- [License](#License)
+- [Acknowledgements](#Acknowledgements)
+- [Fundings](#Fundings)
+
 ## Getting Started
 
-When on the [TimeFreq startup page](https://github.com/CorentinWicht/TimeFreq), start by clicking on `↓ Code` on the top right of the screen and then `Download ZIP` to download the whole repository (alternatively you can also clone it). 
+When on the [TimeFreq startup page](https://github.com/CorentinWicht/TimeFreq), start by clicking on `⬇️ Code` on the top right of the screen and then `Download ZIP` to download the whole repository (alternatively you can also clone it). 
 Then, you will need to run the scripts **in the following order**:
 
 ```
@@ -15,7 +31,7 @@ Then, you will need to run the scripts **in the following order**:
 3.TimeFreq_Figures.m (optional and still in development)
 ```
 
-You will find below a step by step explanation on how to run each script in MATLAB (by clicking on the `Run` button or on your keyboard's button `F5`).
+You will find below a step by step explanation on how to run each script in MATLAB (by clicking on the `▶️ Run` button or on your keyboard's button `⌨️ F5`).
 
 
 ### 1.TimeFreq_Design.m
@@ -133,14 +149,37 @@ You can now run the second script.
 
 ### 2.TimeFreq_Main.m
 
-**XXX**
+This second script is the one running the time-frequency decomposition as well as computation of statistics.
+
+Depending on your design and your hardware the computation might take several days. 
+
+Again, click on the `▶️ Run` button or on your keyboard's button `⌨️ F5` to run the script.\
+You don't need to provide any additional information, it will automatically import the parameters that were exported by the [first script](# 1.TimeFreq_Design.m). 
+
+Once the compution is finished there will be a message in MATLAB Command Window:
+
+```
+The script is done!
+```
+
+The data are saved based on your Current Folder location (i.e. run `pwd` in MATLAB Command Window to know where is the working directoy) accordingly:
+
+```
+📁 [Working directory]
+ ↳ 📁 [Exports_DD-MM-YY_HHMM]
+    ↳ 📁 [Raw]
+    ↳ 📁 [Stats]
+```
 
 ## Dependencies (Should write all rights reserved to XXX ?)
-1. [EEGLAB v14.1.2b: ](https://github.com/sccn/eeglab) Importing the .set EEG files
-2. [NMD v.2.00: ](http://www.physics.lancs.ac.uk/research/nbmphysics/diats/tfr/) Computing the Morlet wavelet-based time-frequency decomposition
-3. [FMUT v.0.5.1: ](https://github.com/ericcfields/FMUT) Computation of permutation-based statistics
-4. [ept_TFCE:](https://github.com/Mensen/ept_TFCE-matlab) Computation of permutation-based statistics and TFCE correction
-5. Isolated functions:
+| Plugins | Description |
+| ------ | ------ |
+| [EEGLAB v14.1.2b: ](https://github.com/sccn/eeglab) | Importing the .set EEG files |
+| [NMD v.2.00: ](http://www.physics.lancs.ac.uk/research/nbmphysics/diats/tfr/) | Computing the Morlet wavelet-based time-frequency decomposition |
+| [FMUT v.0.5.1: ](https://github.com/ericcfields/FMUT) | Computation of permutation-based statistics |
+| [ept_TFCE:](https://github.com/Mensen/ept_TFCE-matlab) | Computation of permutation-based statistics and TFCE correction |
+
+Isolated functions:
 * [Timerwaitbar v1.02](https://ch.mathworks.com/matlabcentral/fileexchange/55985-timer-waitbar) (upgraded)
 * [bluewhitered v1.00](https://ch.mathworks.com/matlabcentral/fileexchange/4058-bluewhitered)
 * [limo_FDR from the LIMO Toolbox](https://github.com/LIMO-EEG-Toolbox/limo_tools)
@@ -154,7 +193,6 @@ You can now run the second script.
 The dependencies are already included in the [functions/Dependencies](functions/Dependencies) folder.
 
 ## Author
-
 **Corentin Wicht**\
 *SNSF Doc.CH PhD student*\
 *corentin.wicht@unifr.ch, corentinw.lcns@gmail.com*\
@@ -162,7 +200,6 @@ The dependencies are already included in the [functions/Dependencies](functions/
 *University of Fribourg, Switzerland*
 
 ## License
-
 <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International License</a>.
 
 See the [LICENSE.md](LICENSE.md) file for details
