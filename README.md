@@ -167,3 +167,10 @@ The dependencies are already included in the [functions/Dependencies](functions/
 
 See the [LICENSE.md](LICENSE.md) file for details
 
+## Acknowledgements
+PD Dr. Lucas Spierer, President of the Section of Medicine (Faculty of science and Medicine, University of Fribourg, Switzerland), Professor of
+Neurology and co-director of the [Laboratory for Neurorehabilitation Science (LNS, UNIFR)](https://www3.unifr.ch/med/spierer/en/) provided substantial support and advices regarding theoretical conceptualization as well as access to the workplace and the infrastructure required to successfully complete the project. Additionally, Hugo Najberg and Dr. Michael Mouthon provided valuable advices regarding programming issues in MATLAB and technical support.
+
+## Fundings
+This research was supported by the [Swiss National Science Foundation](http://www.snf.ch/fr/Pages/default.aspx)
+Grants [#P0LAP1_181689](http://p3.snf.ch/project-181689) to Corentin Wicht and [#320030_175469](http://p3.snf.ch/project-175469) to PD Dr. Lucas Spierer
