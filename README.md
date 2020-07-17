@@ -5,15 +5,7 @@ The MATLAB scripts in this repository enable to compute EEG time-frequency decom
 **OF NOTE: The analysis script can currently only import .set EEG files (see [EEGLAB](https://github.com/sccn/eeglab)).**
 
 ## Table of Contents
-- [Getting Started](#Getting Started)
 - [1.TimeFreq_Design](#1.TimeFreq_Design.m)
-- [1.1. Settings](#1.1. Settings)
-- [1.2. Inputs ERP](#1.2. Inputs ERP)
-- [1.3. Design Definition](#1.3. Design Definition)
-- [1.4. Save Design Variables](#1.4. Save Design Variables)
-- [1.5. Frequency Bands Definition](#1.5. Frequency Bands Definition)
-- [1.6. Save Frequency Bands Variables](#1.6. Save Frequency Bands Variables)
-- [1.7. Import TF Decomposition](#1.7. Import TF Decomposition)
 - [2.TimeFreq_Main](#2.TimeFreq_Main.m)
 - [Author](#Author)
 - [License](#License)
@@ -167,17 +159,34 @@ The data are saved based on your Current Folder location (i.e. run `pwd` in MATL
 ```
 📁 [Working directory]
  ↳ 📁 [Exports_DD-MM-YY_HHMM]
-    ↳ 📁 [Raw]
+    ↳ 📁 [Raw] 
+       ↳ 💾 RawTFData.mat
     ↳ 📁 [Stats]
+       ↳ 💾 ActivityType_TaskName_Condition_FrequencyBand.mat (e.g. Induced_GoNoGo_CR_Theta.mat)
+    ↳ 📋 TimeFreqlog_DD-MM-YY_HHMM.txt
+    ↳ 📋 Analyses_DD-MMM-YYYY_HHMM.xlsx
 ```
+| FILES | Content |
+| ------ | ------ |
+| RawTFData.mat|*Under construction*|
+| ActivityType_TaskName_Condition_FrequencyBand.mat.mat|*Under construction*|
+|TimeFreqlog_DD-MM-YY_HHMM.txt|*Under construction*|
+|Analyses_DD-MMM-YYYY_HHMM.xlsx|*Under construction*|
+
+### 3.TimeFreq_Figures.m
+
+*Under construction*
+
+📊
+
 
 ## Dependencies (Should write all rights reserved to XXX ?)
-| Plugins | Description |
+| PLUGINS | Description |
 | ------ | ------ |
-| [EEGLAB v14.1.2b: ](https://github.com/sccn/eeglab) | Importing the .set EEG files |
-| [NMD v.2.00: ](http://www.physics.lancs.ac.uk/research/nbmphysics/diats/tfr/) | Computing the Morlet wavelet-based time-frequency decomposition |
-| [FMUT v.0.5.1: ](https://github.com/ericcfields/FMUT) | Computation of permutation-based statistics |
-| [ept_TFCE:](https://github.com/Mensen/ept_TFCE-matlab) | Computation of permutation-based statistics and TFCE correction |
+| [EEGLAB v14.1.2b](https://github.com/sccn/eeglab) | Importing the .set EEG files |
+| [NMD v.2.00](http://www.physics.lancs.ac.uk/research/nbmphysics/diats/tfr/) | Computing the Morlet wavelet-based time-frequency decomposition |
+| [FMUT v.0.5.1](https://github.com/ericcfields/FMUT) | Computation of permutation-based statistics |
+| [ept_TFCE](https://github.com/Mensen/ept_TFCE-matlab) | Computation of permutation-based statistics and TFCE correction |
 
 Isolated functions:
 * [Timerwaitbar v1.02](https://ch.mathworks.com/matlabcentral/fileexchange/55985-timer-waitbar) (upgraded)
