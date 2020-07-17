@@ -140,6 +140,16 @@ You can now run the second script.
 2. [NMD v.2.00: ](http://www.physics.lancs.ac.uk/research/nbmphysics/diats/tfr/) Computing the Morlet wavelet-based time-frequency decomposition
 3. [FMUT v.0.5.1: ](https://github.com/ericcfields/FMUT) Computation of permutation-based statistics
 4. [ept_TFCE:](https://github.com/Mensen/ept_TFCE-matlab) Computation of permutation-based statistics and TFCE correction
+5. Isolated functions:
+* [Timerwaitbar v1.02](https://ch.mathworks.com/matlabcentral/fileexchange/55985-timer-waitbar) (upgraded)
+* [bluewhitered v1.00](https://ch.mathworks.com/matlabcentral/fileexchange/4058-bluewhitered)
+* [limo_FDR from the LIMO Toolbox](https://github.com/LIMO-EEG-Toolbox/limo_tools)
+* [natsort v2.10](https://ch.mathworks.com/matlabcentral/fileexchange/47434-natural-order-filename-sort)
+* [saveeph](https://sites.google.com/site/cartoolcommunity/files)
+* [textprogressbar v1.00](https://ch.mathworks.com/matlabcentral/fileexchange/28067-text-progress-bar)
+* [topoplotIndie]
+* [vis_artifacts](https://github.com/sccn/clean_rawdata/blob/master/vis_artifacts.m)
+* [vline v1.00](https://ch.mathworks.com/matlabcentral/fileexchange/1039-hline-and-vline)
 
 The dependencies are already included in the [functions/Dependencies](functions/Dependencies) folder.
 
