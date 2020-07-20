@@ -282,6 +282,8 @@ This is an example of one figure generated for a design with 1 between-subject f
 | [NMD v.2.00](http://www.physics.lancs.ac.uk/research/nbmphysics/diats/tfr/) | Computing the Morlet wavelet-based time-frequency decomposition |
 | [FMUT v.0.5.1](https://github.com/ericcfields/FMUT) | Computation of permutation-based statistics |
 | [ept_TFCE](https://github.com/Mensen/ept_TFCE-matlab) | Computation of permutation-based statistics and TFCE correction |
+| [CubeHelix v2.0](https://github.com/DrosteEffect/CubeHelix) | Color scheme generator |
+
 
 Isolated functions:
 * [Timerwaitbar v1.02](https://ch.mathworks.com/matlabcentral/fileexchange/55985-timer-waitbar) (upgraded)
@@ -293,6 +295,7 @@ Isolated functions:
 * [topoplotIndie](https://www.mikexcohen.com/)
 * [vis_artifacts](https://github.com/sccn/clean_rawdata/blob/master/vis_artifacts.m)
 * [vline v1.00](https://ch.mathworks.com/matlabcentral/fileexchange/1039-hline-and-vline)
+* [Composite Colormap v1.00](https://ch.mathworks.com/matlabcentral/fileexchange/59994-composite-colormap?focused=6997081&tab=function)
 
 The dependencies are already included in the [functions/Dependencies](functions/Dependencies) folder.
 
