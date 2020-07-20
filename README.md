@@ -209,7 +209,7 @@ The data are saved based on your Current Folder location (i.e. run `pwd` in MATL
 *This last script is currently still under construction and the creation of figures might crash for some designs.\
 Any contribution is thus more than welcome.*
 
-Once more, click on the `▶️ Run` button or on your keyboard's button `⌨️ F5` to run the script.\
+Once more, click on the `▶️ Run` button or on your keyboard's button `⌨️ F5` to run the script.
 
 The 3 settings-related prompts below will appear sequentially: 
 
