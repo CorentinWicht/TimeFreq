@@ -297,7 +297,7 @@ Isolated functions:
 The dependencies are already included in the [functions/Dependencies](functions/Dependencies) folder.
 
 ## Author
-**Corentin Wicht**\
+[**Corentin Wicht**](https://www.researchgate.net/profile/Wicht_Corentin)\
 *SNSF Doc.CH PhD student*\
 *corentin.wicht@unifr.ch, corentinw.lcns@gmail.com*\
 *[Laboratory for Neurorehabilitation Science](https://www3.unifr.ch/med/spierer/en/)*\
