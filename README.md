@@ -276,9 +276,9 @@ This is an example of one figure generated for a design with 1 between-subject f
 
 
 ## Dependencies
-| PLUGINS | Description | Publication |
-| ------ | ------ | ------ |
-| [EEGLAB v14.1.2b](https://github.com/sccn/eeglab) | [Importing the .set EEG files | Delorme, A., & Makeig, S. (2004). EEGLAB: an open source toolbox for analysis of single-trial EEG dynamics including independent component analysis. Journal of neuroscience methods, 134(1), 9-21](https://sccn.ucsd.edu/eeglab/download/eeglab_jnm03.pdf) |
+| PLUGINS | Description |
+| ------ | ------ |
+| [EEGLAB v14.1.2b](https://github.com/sccn/eeglab) | Importing the .set EEG files | 
 | [NMD v.2.00](http://www.physics.lancs.ac.uk/research/nbmphysics/diats/tfr/) | Computing the Morlet wavelet-based time-frequency decomposition |
 | [FMUT v.0.5.1](https://github.com/ericcfields/FMUT) | Computation of permutation-based statistics |
 | [ept_TFCE](https://github.com/Mensen/ept_TFCE-matlab) | Computation of permutation-based statistics and TFCE correction |
