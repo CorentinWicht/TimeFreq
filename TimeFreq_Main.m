@@ -773,3 +773,6 @@ end
 
 % Closing the file
 fclose(fid);
+
+% Done
+disp("The script is done!")

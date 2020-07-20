@@ -40,7 +40,7 @@ function [Results,Cluster_Results]=Perm_ANOVA(AllData,Design,EEG,varargin)
 %   RESULTS = Data results structure containing the fields:
 %   - F_Obs : Observed F-statistics
 %   - TFCE_Obs : Observed TFCE-corrected F-statistics
-%   - maxTFCE : Maximum TFCE values for each permutation maps 
+%   - maxTFCE : Maximum TFCE value for each permutation map 
 %   - P_Values : Matrix of P-values
 
 %   CLUSTER_RESULTS = Results of the clustering procedure 
