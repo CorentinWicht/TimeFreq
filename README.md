@@ -5,15 +5,6 @@ The MATLAB scripts in this repository enable to compute EEG time-frequency decom
 **OF NOTE: The analysis script can currently only import .set EEG files (see [EEGLAB](https://github.com/sccn/eeglab)).**
 
 ## Table of Contents
-<!--ts-->
-- [1.TimeFreq_Design](#1.TimeFreq_Design.m)
-- [2.TimeFreq_Main](#2.TimeFreq_Main.m)
-- [Author](#Author)
-- [License](#License)
-- [Acknowledgements](#Acknowledgements)
-- [Fundings](#Fundings)
-<!--te-->
-
 - [EEG Time-frequency analysis scripts](#eeg-time-frequency-analysis-scripts)
   * [Table of Contents](#table-of-contents)
   * [Getting Started](#getting-started)
