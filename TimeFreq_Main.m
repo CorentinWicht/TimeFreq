@@ -33,11 +33,11 @@
 clear variables
 %% ----------------- PARAMETERS ------------- %%
 
-% Get time
-time_start = datestr(now);
+% % Get time
+% time_start = datestr(now);
 
 % Get date + time
-date_name = datestr(now,'dd-mm-yy_HHMM');
+% date_name = datestr(now,'dd-mm-yy_HHMM');
 
 % ---------- SET DEPENDENCIES PATHS
 addpath([pwd '/Functions']);
@@ -72,17 +72,17 @@ RelativeTolerance = str2double(PromptInputs{6});
 BandsList=BandsList(all(~cellfun('isempty', BandsList),2),:);
 
 % Path of the unique save folder (including date/time of analysis)
-if ispc
-    save_folder = [pwd '/Exports_' date_name];
-    mkdir(['Exports_' date_name]);
-    mkdir(['Exports_' date_name],'Raw');
-    mkdir(['Exports_' date_name],'Stats');
-else
-    save_folder = [pwd '/Exports']; 
-    mkdir('Exports');
-    mkdir('Exports','Raw');
-    mkdir('Exports','Stats');
-end
+% if ispc
+%     save_folder = [pwd '/Exports_' date_name];
+%     mkdir(['Exports_' date_name]);
+%     mkdir(['Exports_' date_name],'Raw');
+%     mkdir(['Exports_' date_name],'Stats');
+% else
+%     save_folder = [pwd '/Exports']; 
+%     mkdir('Exports');
+%     mkdir('Exports','Raw');
+%     mkdir('Exports','Stats');
+% end
 
 % Loading the TF decomposed matrix
 if strcmpi(ImportTF,'Yes')
@@ -95,8 +95,7 @@ if strcmpi(ImportTF,'Yes')
 end
 
 % Path of most upper folder containing data
-data_folder = uigetdir(pwd,'Select the most upper folder containing your .set EEG data files');
-% data_folder = [pwd '/Data'];
+% data_folder = uigetdir(pwd,'Select the most upper folder containing your .set EEG data files');
 root_folder = pwd;
 cd(data_folder);
 

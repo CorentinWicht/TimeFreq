@@ -42,7 +42,7 @@ end
 StatsDataFN = fieldnames(StatsData);
 
 % Loading the raw data files (mat files)
-[file,path] = uigetfile([pwd '\Exports\Raw\*.mat'],'Select the file containing RAW data (RawTFData.mat in Raw folder)');
+[file,path] = uigetfile([pwd '*.mat'],'Select the file containing RAW data (RawTFData.mat in Raw folder)');
 RawTFData = load([path file]);
 
 % Loading the parameters
@@ -105,15 +105,15 @@ eeglab
 close gcf
 
 % List of EEG files
-EEGFiles = dir(['**/*' '.set']);
+EEGFiles = dir([data_folder '\**/*' '.set']);
 
 % Loading the first file as example
 EEG = pop_loadset('filename',EEGFiles(1).name,'filepath',EEGFiles(1).folder);
 
 % Average referencing Cz
-if strcmpi(answer{6},'Y')
-    EEG = average_ref(EEG,EEG.chaninfo.nodatchans);
-end
+% if strcmpi(answer{6},'Y')
+%     EEG = average_ref(EEG,EEG.chaninfo.nodatchans);
+% end
 
 % Retrieving labels
 Labels = {EEG.chanlocs.labels};
@@ -131,7 +131,7 @@ for k=1:size(Table,1)
     if isfield(Design,'Between')
         BetweenLevels = Design.Between(3:end);
     end
-    if isfield(Design,'Between')
+    if isfield(Design,'Within')
         WithinLevels = Design.Within(3:end);
     end
     CurrentBand = FreqBands{k};
@@ -432,7 +432,7 @@ for k=1:size(Table,1)
 
                 if ~strcmpi(Export,'Do not export')
                     % Create export folders
-                    mkdir ([pwd '/Exports/Figures'])
+                    mkdir ([save_folder '/Figures'])
                 end
 
                 % Are you satisfied?
@@ -449,9 +449,9 @@ for k=1:size(Table,1)
 
                     % Exporting 
                     if strcmpi(Export,'Export in .bmp')
-                        SaveFigures(gcf,[pwd '/Exports/Figures/' Str2],'w','bmp');
+                        SaveFigures(gcf,[save_folder '/Figures/' Str2],'w','bmp');
                     elseif strcmpi(Export,'Export in .fig')
-                        savefig([pwd '/Exports/Figures/' Str2])
+                        savefig([save_folder '/Figures/' Str2])
                         close gcf
                     elseif strcmpi(Export,'Do not export')
                         close gcf
@@ -987,7 +987,7 @@ for k=1:size(Table,1)
 
                     if ~strcmpi(Export,'Do not export')
                         % Create export folders
-                        mkdir ([pwd '/Exports/Figures'])
+                        mkdir ([save_folder '/Figures'])
                     end
 
                     % Are you satisfied?
@@ -1004,9 +1004,9 @@ for k=1:size(Table,1)
 
                         % Exporting 
                         if strcmpi(Export,'Export in .bmp')
-                            SaveFigures(gcf,[pwd '/Exports/Figures/' Str2],'w','bmp');
+                            SaveFigures(gcf,[save_folder '/Figures/' Str2],'w','bmp');
                         elseif strcmpi(Export,'Export in .fig')
-                            savefig([pwd '/Exports/Figures/' Str2])
+                            savefig([save_folder '/Figures/' Str2])
                             close gcf
                         elseif strcmpi(Export,'Do not export')
                             close gcf
@@ -1026,4 +1026,4 @@ for k=1:size(Table,1)
     end
 end
 
-disp('Export done !')
+disp('The code is done !')

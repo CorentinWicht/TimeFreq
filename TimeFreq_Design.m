@@ -20,6 +20,12 @@
 clear variables
 
 %% PROMPTS
+% Get date + time
+date_name = datestr(now,'dd-mm-yy_HHMM');
+
+% Get time
+time_start = datestr(now);
+
 % Analyses 
 answer = inputdlg({['Would you like to assess:'...
     newline '[y = YES, n = NO]'... 
@@ -117,6 +123,16 @@ ImportTF = questdlg(['Would you like to import a time-frequency (TF) decompositi
     newline 'This will bypass the first half of the script and only run statistics.'], ...
 	'Import time-frequency decomposition matrix ?', ...
 	'Yes','No','No');
+
+% Path of most upper folder containing data
+data_folder = uigetdir(pwd,'Select the most upper folder containing your .set EEG data files');
+
+% Path of the unique save folder (including date/time of analysis)
+save_folder = uigetdir(pwd,'Select the folder where you want to export the results');
+save_folder = [save_folder '\Exports_' date_name];
+mkdir(save_folder);
+mkdir(save_folder,'Raw');
+mkdir(save_folder,'Stats');
 
 %% Saving all data in mat file
 clear f p ScreenSize
