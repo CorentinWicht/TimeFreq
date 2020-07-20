@@ -168,16 +168,8 @@ The data are saved based on your Current Folder location (i.e. run `pwd` in MATL
 ```
 | FILES | Content |
 | ------ | ------ |
-|RawTFData.mat|Matlab data file including one variable for each type of time-frequency metric (e.g. Induced).
-Each variable is a meta-structure containing substructures for each Task, Condition, etc. (depending on your design).
-Finally, you will find two substructures "Data" and "Freqs" wich include matrices for, resp. the time-frequency decomposition and the list of frequency bins for each EEG data file included in the analysis|
-|ActivityType_TaskName_Condition_FrequencyBand.mat.mat|Matlab data file containing two substructures "TFCE" and "Clusters".
-The "TFCE" one includes N substructures depending on your design (e.g. 3 substructures for a 2x2 design).
-Inside each design-specific structure there are 4 matrices:
-Obs = F/T-values
-TFCE_Obs = TFCE-corrected F/T-statistics
-maxTFCE = Maximum TFCE value for each permutation map
-P_Values =  TFCE thresholded P_values|
+|RawTFData.mat|Matlab data file including one variable for each type of time-frequency metric (e.g. Induced). Each variable is a meta-structure containing substructures for each Task, Condition, etc. (depending on your design). Finally, you will find two substructures "Data" and "Freqs" wich include matrices for, resp. the time-frequency decomposition and the list of frequency bins for each EEG data file included in the analysis|
+|ActivityType_TaskName_Condition_FrequencyBand.mat.mat|Matlab data file containing two substructures "TFCE" and "Clusters". The "TFCE" one includes N substructures depending on your design (e.g. 3 substructures for a 2x2 design). Inside each design-specific structure there are 4 matrices: 1) "Obs" = F/T-values \| 2) "TFCE_Obs" = TFCE-corrected F/T-statistics \| 3) "maxTFCE" = Maximum TFCE value for each permutation map \| 4) "P_Values" =  TFCE thresholded P_values|
 |TimeFreqlog_DD-MM-YY_HHMM.txt|Text file summarizing each selected parameters for one particular analysis|
 |Analyses_DD-MMM-YYYY_HHMM.xlsx|Excel file containing the results of the statistical comparisons (i.e. Cluster threshold, number of significant clusters, etc.)|
 
