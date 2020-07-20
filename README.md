@@ -4,9 +4,17 @@ The MATLAB scripts in this repository enable to compute EEG time-frequency decom
 
 **OF NOTE: The analysis script can currently only import .set EEG files (see [EEGLAB](https://github.com/sccn/eeglab)).**
 
+## Table of Contents
+- [1.TimeFreq_Design](#1.TimeFreq_Design.m)
+- [2.TimeFreq_Main](#2.TimeFreq_Main.m)
+- [Author](#Author)
+- [License](#License)
+- [Acknowledgements](#Acknowledgements)
+- [Fundings](#Fundings)
+
 ## Getting Started
 
-When on the [TimeFreq startup page](https://github.com/CorentinWicht/TimeFreq), start by clicking on `↓ Code` on the top right of the screen and then `Download ZIP` to download the whole repository (alternatively you can also clone it). 
+When on the [TimeFreq startup page](https://github.com/CorentinWicht/TimeFreq), start by clicking on `⬇️ Code` on the top right of the screen and then `Download ZIP` to download the whole repository (alternatively you can also clone it). 
 Then, you will need to run the scripts **in the following order**:
 
 ```
@@ -15,7 +23,7 @@ Then, you will need to run the scripts **in the following order**:
 3.TimeFreq_Figures.m (optional and still in development)
 ```
 
-You will find below a step by step explanation on how to run each script in MATLAB (by clicking on the `Run` button or on your keyboard's button `F5`).
+You will find below a step by step explanation on how to run each script in MATLAB (by clicking on the `▶️ Run` button or on your keyboard's button `⌨️ F5`).
 
 
 ### 1.TimeFreq_Design.m
@@ -131,23 +139,85 @@ Once you are done with this last prompt, the script will generate a `TimeFreq_Pa
 You can now run the second script. 
 
 
+### 2.TimeFreq_Main.m
+
+This second script is the one running the time-frequency decomposition as well as computation of statistics.
+
+Depending on your design and your hardware the computation might take several days. 
+
+Again, click on the `▶️ Run` button or on your keyboard's button `⌨️ F5` to run the script.\
+You don't need to provide any additional information, it will automatically import the parameters that were exported by the [first script](# 1.TimeFreq_Design.m). 
+
+Once the compution is finished there will be a message in MATLAB Command Window:
+
+```
+The script is done!
+```
+
+The data are saved based on your Current Folder location (i.e. run `pwd` in MATLAB Command Window to know where is the working directoy) accordingly:
+
+```
+📁 [Working directory]
+ ↳ 📁 [Exports_DD-MM-YY_HHMM]
+    ↳ 📁 [Raw] 
+       ↳ 💾 RawTFData.mat
+    ↳ 📁 [Stats]
+       ↳ 💾 ActivityType_TaskName_Condition_FrequencyBand.mat (e.g. Induced_GoNoGo_CR_Theta.mat)
+    ↳ 📋 TimeFreqlog_DD-MM-YY_HHMM.txt
+    ↳ 📋 Analyses_DD-MMM-YYYY_HHMM.xlsx
+```
+| FILES | Content |
+| ------ | ------ |
+|RawTFData.mat|Matlab data file including one variable for each type of time-frequency metric (e.g. Induced). Each variable is a meta-structure containing substructures for each Task, Condition, etc. (depending on your design). Finally, you will find two substructures "Data" and "Freqs" wich include matrices for, resp. the time-frequency decomposition and the list of frequency bins for each EEG data file included in the analysis|
+|ActivityType_TaskName_Condition_FrequencyBand.mat.mat|Matlab data file containing two substructures "TFCE" and "Clusters". The "TFCE" one includes N substructures depending on your design (e.g. 3 substructures for a 2x2 design). Inside each design-specific structure there are 4 matrices: 1) "Obs" = F/T-values \| 2) "TFCE_Obs" = TFCE-corrected F/T-statistics \| 3) "maxTFCE" = Maximum TFCE value for each permutation map \| 4) "P_Values" =  TFCE thresholded P_values|
+|TimeFreqlog_DD-MM-YY_HHMM.txt|Text file summarizing each selected parameters for one particular analysis|
+|Analyses_DD-MMM-YYYY_HHMM.xlsx|Excel file containing the results of the statistical comparisons (i.e. Cluster threshold, number of significant clusters, etc.)|
+
+### 3.TimeFreq_Figures.m
+
+*Under construction*
+
+📊
+
+
 ## Dependencies (Should write all rights reserved to XXX ?)
-1. [EEGLAB v14.1.2b: ](https://github.com/sccn/eeglab) Importing the .set EEG files
-2. [NMD v.2.00: ](http://www.physics.lancs.ac.uk/research/nbmphysics/diats/tfr/) Computing the Morlet wavelet-based time-frequency decomposition
-3. [FMUT v.0.5.1: ](https://github.com/ericcfields/FMUT) Computation of permutation-based statistics
-4. [ept_TFCE:](https://github.com/Mensen/ept_TFCE-matlab) Computation of permutation-based statistics and TFCE correction
+| PLUGINS | Description |
+| ------ | ------ |
+| [EEGLAB v14.1.2b](https://github.com/sccn/eeglab) | Importing the .set EEG files |
+| [NMD v.2.00](http://www.physics.lancs.ac.uk/research/nbmphysics/diats/tfr/) | Computing the Morlet wavelet-based time-frequency decomposition |
+| [FMUT v.0.5.1](https://github.com/ericcfields/FMUT) | Computation of permutation-based statistics |
+| [ept_TFCE](https://github.com/Mensen/ept_TFCE-matlab) | Computation of permutation-based statistics and TFCE correction |
+
+Isolated functions:
+* [Timerwaitbar v1.02](https://ch.mathworks.com/matlabcentral/fileexchange/55985-timer-waitbar) (upgraded)
+* [bluewhitered v1.00](https://ch.mathworks.com/matlabcentral/fileexchange/4058-bluewhitered)
+* [limo_FDR from the LIMO Toolbox](https://github.com/LIMO-EEG-Toolbox/limo_tools)
+* [natsort v2.10](https://ch.mathworks.com/matlabcentral/fileexchange/47434-natural-order-filename-sort)
+* [saveeph](https://sites.google.com/site/cartoolcommunity/files)
+* [textprogressbar v1.00](https://ch.mathworks.com/matlabcentral/fileexchange/28067-text-progress-bar)
+* [topoplotIndie](https://www.mikexcohen.com/)
+* [vis_artifacts](https://github.com/sccn/clean_rawdata/blob/master/vis_artifacts.m)
+* [vline v1.00](https://ch.mathworks.com/matlabcentral/fileexchange/1039-hline-and-vline)
+
+The dependencies are already included in the [functions/Dependencies](functions/Dependencies) folder.
 
 ## Author
-
 **Corentin Wicht**\
 *SNSF Doc.CH PhD student*\
-*corentin.wicht@unifr.ch, corentinw.lcns@gmail.com*
+*corentin.wicht@unifr.ch, corentinw.lcns@gmail.com*\
 *[Laboratory for Neurorehabilitation Science](https://www3.unifr.ch/med/spierer/en/)*\
-*University of Fribourg, Switzerland*\
+*University of Fribourg, Switzerland*
 
 ## License
-
 <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International License</a>.
 
 See the [LICENSE.md](LICENSE.md) file for details
 
+## Acknowledgements
+PD Dr. Lucas Spierer, President of the Section of Medicine (Faculty of Science and Medicine, University of Fribourg, Switzerland), Professor of
+Neurology and Director of the [Laboratory for Neurorehabilitation Science (LNS, UNIFR)](https://www3.unifr.ch/med/spierer/en/) provided substantial support and advices regarding theoretical conceptualization as well as access to the workplace and the infrastructure required to successfully complete the project. Additionally, [Hugo Najberg](https://github.com/HugoNjb) and [Dr. Michael Mouthon](https://www3.unifr.ch/med/fr/section/personnel/all/people/3229/6a825) provided valuable advices regarding programming issues in MATLAB and technical support.
+
+## Fundings
+This research was supported by [Swiss National Science Foundation](http://www.snf.ch/fr/Pages/default.aspx) grants:
+* [#P0LAP1_181689](http://p3.snf.ch/project-181689) to Corentin Wicht
+* [#320030_175469](http://p3.snf.ch/project-175469) to PD Dr. Lucas Spierer
