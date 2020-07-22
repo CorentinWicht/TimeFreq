@@ -18,7 +18,7 @@ The MATLAB scripts in this repository enable to compute EEG time-frequency decom
     - [1.9. Save folder](#19-save-folder)
   + [2.TimeFreq_Main.m](#2timefreq-mainm)
   + [3.TimeFreq_Figures.m](#3timefreq-figuresm)
-* [Dependencies (Should write all rights reserved to XXX ?)](#dependencies--should-write-all-rights-reserved-to-xxx---)
+* [Dependencies](#dependencies)
 * [Author](#author)
 * [License](#license)
 * [Acknowledgements](#acknowledgements)
