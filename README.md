@@ -2,7 +2,7 @@
 
 The MATLAB scripts in this repository enable to compute EEG time-frequency decomposition using Morlet Wavelet transform as well as robust permutation-based statistical analyses with Threshold-Free Cluster Enhancement (TFCE) to account for multiple comparisons correction.
 
-**OF NOTE: The analysis script can currently only import .set EEG files (see [EEGLAB](https://github.com/sccn/eeglab)).**
+**⚠️ OF NOTE: The analysis script can currently only import .set EEG files (see [EEGLAB](https://github.com/sccn/eeglab)).**
 
 ## Table of Contents
 * [Getting Started](#getting-started)
