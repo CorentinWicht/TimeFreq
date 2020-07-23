@@ -194,7 +194,15 @@ The data are saved based on your Current Folder location (i.e. run `pwd` in MATL
        ↳ 💾 ActivityType_TaskName_Condition_FrequencyBand.mat (e.g. Induced_GoNoGo_CR_Theta.mat)
     ↳ 📋 TimeFreqlog_DD-MM-YY_HHMM.txt
     ↳ 📋 Analyses_DD-MMM-YYYY_HHMM.xlsx
+    
+------------------------------------------------------------------         
+TaskName      = Names of the folder containing your files
+Condition     = Names of the levels of the WS factor or of subfolers inside the main folder
+FrequencyBand = Names that you gave to the frequency bands of interest
+DD-MM-YY_HHMM = Date and time of analysis
+------------------------------------------------------------------  
 ```
+
 | FILES | Content |
 | ------ | ------ |
 |RawTFData.mat|Matlab data file including one variable for each type of time-frequency metric (e.g. Induced). Each variable is a meta-structure containing substructures for each Task, Condition, etc. (depending on your design). Finally, you will find two substructures "Data" and "Freqs" wich include matrices for, resp. the time-frequency decomposition and the list of frequency bins for each EEG data file included in the analysis|
@@ -267,6 +275,13 @@ On the contrary if there are significant clusters, you will find your figures in
  ↳ 📁 [Exports_DD-MM-YY_HHMM]
     ↳ 📁 [Figures] 
        ↳ 📊 ActivityType_TaskName_Condition_TFCE_FrequencyBand.Extension (e.g. Evoked_GNG_CR_TFCE_Theta.bmp)
+
+------------------------------------------------------------------         
+TaskName      = Names of the folder containing your files
+Condition     = Names of the levels of the WS factor or of subfolers inside the main folder
+FrequencyBand = Names that you gave to the frequency bands of interest
+DD-MM-YY_HHMM = Date and time of analysis
+------------------------------------------------------------------  
 ```
 
 This is an example of one figure generated for a design with 1 between-subject factor including two levels (OH - PBO):
