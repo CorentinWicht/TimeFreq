@@ -310,7 +310,7 @@ Isolated functions:
 * [vline v1.00](https://ch.mathworks.com/matlabcentral/fileexchange/1039-hline-and-vline)
 * [Composite Colormap v1.00](https://ch.mathworks.com/matlabcentral/fileexchange/59994-composite-colormap?focused=6997081&tab=function)
 
-The dependencies are already included in the [functions/Dependencies](functions/Dependencies) folder.
+The dependencies are already included in the [Dependencies](functions/Dependencies) folder.
 
 ## Author
 [**Corentin Wicht**](https://www.researchgate.net/profile/Wicht_Corentin)\
