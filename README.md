@@ -334,6 +334,6 @@ See the [LICENSE.md](LICENSE.md) file for details
 PD Dr. Lucas Spierer, Director of the [Laboratory for Neurorehabilitation Science (LNS), Section of Medicine, Faculty of Science and Medicine, University of Fribourg, Switzerland](https://www3.unifr.ch/med/spierer/en/) provided substantial support and advices regarding theoretical conceptualization as well as access to the workplace and the infrastructure required to successfully complete the project. Additionally, [Hugo Najberg](https://github.com/HugoNjb), [Dr. Michael Mouthon](https://www3.unifr.ch/med/fr/section/personnel/all/people/3229/6a825) and [Dr. Michael De Pretto](https://www3.unifr.ch/med/fr/section/personnel/all/people/117251/7303f) provided valuable support regarding theoretical background, programming issues and technical support.
 
 ## Fundings
-This research was supported by [Swiss National Science Foundation](http://www.snf.ch/fr/Pages/default.aspx) grants:
+This project was supported by [Swiss National Science Foundation](http://www.snf.ch/fr/Pages/default.aspx) grants:
 * [#P0LAP1_181689](http://p3.snf.ch/project-181689) to Corentin Wicht
 * [#320030_175469](http://p3.snf.ch/project-175469) to PD Dr. Lucas Spierer
